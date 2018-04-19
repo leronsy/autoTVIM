@@ -15,16 +15,16 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/autoTVIM$test.coverage" NAME="test Coverage Results" MODIFIED="1524127823879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/autoTVIM$main.coverage" NAME="main Coverage Results" MODIFIED="1524177958615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/autoTVIM$main.coverage" NAME="main Coverage Results" MODIFIED="1524178734581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/autoTVIM$Improver02.coverage" NAME="Improver02 Coverage Results" MODIFIED="1524177374981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="assembly.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="assembly.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assembly.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="230" column="41" lean-forward="true" selection-start-line="230" selection-start-column="41" selection-end-line="230" selection-end-column="41" />
+            <state relative-caret-position="110">
+              <caret line="215" column="18" lean-forward="true" selection-start-line="215" selection-start-column="4" selection-end-line="215" selection-end-column="18" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -67,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+            <state relative-caret-position="226">
+              <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -90,7 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find />
       <find>==========================================================================================</find>
       <find>ФАМИЛИИ:</find>
       <find>structure_file</find>
@@ -116,10 +115,11 @@
       <find>_cor</find>
       <find>вставка</find>
       <find>addcontentsline</find>
-      <find />
-      <find />
-      <find />
-      <find />
+      <find>Успешная вставка</find>
+      <find>Не найдены данные</find>
+      <find>Не найдены данные для создания</find>
+      <find>Строки до разделителя</find>
+      <find>chdir</find>
     </findStrings>
     <replaceStrings>
       <replace>struct_add_addcontentsline</replace>
@@ -164,8 +164,8 @@
         <option value="$PROJECT_DIR$/decorators.py" />
         <option value="$PROJECT_DIR$/Improver02.py" />
         <option value="$PROJECT_DIR$/structuring.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/assembly.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -389,8 +389,8 @@
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.32838285" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="4" weight="0.32838285" />
-      <window_info active="true" anchor="bottom" x="11" y="267" width="1344" height="194" id="Run" order="6" visible="true" weight="0.30528054" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="4" visible="true" weight="0.32838285" />
+      <window_info anchor="bottom" x="11" y="267" width="1344" height="194" id="Run" order="6" weight="0.30528054" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32838285" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.08018155" />
       <window_info anchor="right" id="Database" order="2" />
@@ -782,13 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dictionaries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exception_logger.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-494">
@@ -796,6 +789,13 @@
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dictionaries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -811,22 +811,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/assembly.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        <state relative-caret-position="110">
+          <caret line="215" column="18" lean-forward="true" selection-start-line="215" selection-start-column="4" selection-end-line="215" selection-end-column="18" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assembly.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="230" column="41" lean-forward="true" selection-start-line="230" selection-start-column="41" selection-end-line="230" selection-end-column="41" />
+        <state relative-caret-position="226">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
         </state>
       </provider>

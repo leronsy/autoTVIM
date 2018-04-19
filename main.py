@@ -4,6 +4,7 @@ from assembly import assemble
 from stream_tee import *
 import time
 import sys
+import os
 
 
 def main(c=True, s=True, a=True, file='file_list.txt', debug=True):
@@ -18,8 +19,9 @@ def main(c=True, s=True, a=True, file='file_list.txt', debug=True):
     """
     # 1
     time_now = time.strftime("%y.%m.%d %H-%M")
-    logfile = open("./logs/log" + time_now + ".txt", "w+")
-    LastLog = open("./logs/_LastLog.txt", "w+")
+    cur_path = os.getcwd()
+    logfile = open(cur_path + '\\logs\\log ' + time_now + '.txt', 'w')
+    LastLog = open(cur_path + '\\logs\\_LastLog.txt', 'w')
     sys.stdout = stream_tee(sys.stdout, logfile, LastLog)
     # 2
     if c:
@@ -30,7 +32,9 @@ def main(c=True, s=True, a=True, file='file_list.txt', debug=True):
     # 4
     if a:
         assemble(file, debug)
+
+    os.chdir(cur_path)
     return
 
-
-main()  # True, True, False)
+if __name__ == "__main__":
+    main()  # True, True, False)
