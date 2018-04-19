@@ -7,22 +7,22 @@ from decorators import decor2, decor1  # , decor3
 
 
 @decor1
-def correct(file_paths=None):
+def correct(file, debug):
     """
     Главная функция модуля исправлений
     Получает список путей к статьям file_list из get_file_list()
     В цикле вызывает функцию correct_file для исправления каждого отдельного файла
     :return: сообщение 'msg'
     """
-    msg=''
-    file_list = get_file_list()['list']
+    msg = ''
+    file_list = get_file_list(file)['list']
     for file_name in file_list:
         try:
-            correct_file(file_name)
+            correct_file(file_name, debug)
         except FileNotFoundError:
-            msg+=file_name+', '
+            msg += file_name + ', '
     if len(msg):
-        msg = 'WARN: Не найдены статьи:\t'+msg
+        msg = 'WARN: Не найдены статьи:\t' + msg
     else:
         msg = 'Успешно исправлены все файлы'
     return {'msg': msg}
@@ -32,7 +32,7 @@ def correct(file_paths=None):
 
 
 @decor2
-def correct_file(file_name):
+def correct_file(file_name, debug):
     """
     Считывает файл в строку file_content
     Применяет словарь регулярных выражений к строке file_content с помощью функции re.sub
@@ -49,7 +49,6 @@ def correct_file(file_name):
         with codecs.open(file_name, 'r', 'cp1251') as fr:
             file_content = fr.read()
             for key, regexp in correction_dict.items():
-
                 # matches=re.finditer(regexp[0],file_content)
                 # dct={}
                 # print('pattern:\t',"[",regexp[0],"]")
@@ -60,10 +59,12 @@ def correct_file(file_name):
                 #     print('Position: [%d:%d], Match:%s' %(key[0],key[1],val))
                 file_content = re.sub(regexp[0], regexp[1], file_content)
     except FileNotFoundError:
-        msg = 'ERR: Не найден файл статьи '+file_name
+        msg = 'ERR: Не найден файл статьи ' + file_name
         raise
     else:
-        with open(file_name[:-4] + "_cor.tex", 'w', newline='\n') as fw:
+        if debug:
+            file_name = file_name[:-4] + "_c.tex"
+        with open(file_name, 'w', newline='\n') as fw:
             fw.write(file_content)
             msg = 'Исправлен:\t' + file_name
     return {'msg': msg}

@@ -1,15 +1,9 @@
 import re
 import codecs
-import time
-import sys
 from decorators import decor2, decor1, decor3, decor4
 from dictionaries import structuring_dict
 from file_management import get_file_list
-from stream_tee import *
 
-timestr = time.strftime("%y.%m.%d %H-%M")
-logfile = open("./logs/log"+timestr+".txt", "w+")
-sys.stdout = stream_tee(sys.stdout, logfile)
 
 @decor4
 def search_pattern(file_content, pattern_key):
@@ -86,7 +80,7 @@ def add_author_labels(file_content):
     :return:
     """
     changes = 0
-    msg=None
+    msg = None
     res_dict = create_labels(file_content)
     label_begin = res_dict['label_begin']
     label_end = res_dict['label_end']
@@ -207,11 +201,12 @@ def add_input_lines(file_content):
 @decor3
 def add_addcontentsline(file_content):
     """ Добавляет \addcontentsline в начале файла
-    Принимает содержимое файла file_content и словарь структурирования structuring_dict
+    Принимает содержимое файла file_content
     Из словаря берёт скомпилированные re.compile выражения для поиска
     "\abstract" и "\abstractWithTitle",достаёт из них title и author
     создаёт строки \addcontentsline и вставляет их в начало файла
     Возвращает отредактированный файл"""
+    # TODO: проверка для каждой отдельной строки
     changes = 0
     msg = "addcontentsline уже существуют."
     lang_list = ['re title_author_en', 're title_author_ru']
@@ -239,7 +234,7 @@ function_list = [clean_above_separator, add_author_labels, comment_after_separat
 
 
 @decor2
-def structure_file(file_name):
+def structure_file(file_name, debug):
     """ Функция создания структуры для отдельного файла
     Принимает путь к файлу и словарь структурирования
     Читает содержимое файла в file_content
@@ -247,43 +242,46 @@ def structure_file(file_name):
     Применяет функциии структурирования
     Записывает отредактированный файл по тому же пути но с прибавкой _struct
     (NOTE: в рабочей версии убрать) """
-    # print('\tРабота над файлом:\t', file_name, sep='')
-    with codecs.open(file_name, 'r', 'cp1251') as fr:
-        file_content = fr.read()
-        change_list = list()
-        for idx, fun in enumerate(function_list):
-            # print('- - - - - - - - - - - - - - - - - -\n', fun.__name__, sep='')
-            res = fun(file_content)
-            file_content = res.get('file_content')
-            changes = res.get('changes')
-            change_list.append(changes)
-            # if changes:
-            #     print('+', )  # '\n--------------------')
-            # else:
-            #     print('-')  # ,'\n--------------------')
-        # file_content = clean_above_separator(file_content.get('del_separator'))
-        # file_content = add_addcontentsline(file_content)
-        # file_content = add_input_lines(file_content)
-        # file_content = comment_after_separator(file_content)
-
+    if debug:
+        file_name = file_name[:-4] + '_c.tex'
+    try:
+        with codecs.open(file_name, 'r', 'cp1251') as fr:
+            file_content = fr.read()
+            change_list = list()
+            for idx, fun in enumerate(function_list):
+                res = fun(file_content)
+                file_content = res.get('file_content')
+                changes = res.get('changes')
+                change_list.append(changes)
+    except FileNotFoundError:
+        msg = 'ERR: Не найден файл статьи ' + file_name
+        raise
+    else:
         # без newline='\n' портятся переводы строк
-        with open(file_name[:-4] + "_struct.tex", 'w', newline='\n') as fw:
+        with open(file_name[:-4] + "s.tex", 'w', newline='\n') as fw:
             fw.write(file_content)
         if sum(change_list) > 0:
-            msg = (file_name, "структурирован.", change_list)
+            msg = file_name + " структурирован. " + str(change_list)
         else:
-            msg = (file_name, "не нуждается в структурировании.")
-        # print('==========================================================================================')
+            msg = file_name + "не нуждается в структурировании."
     return {'msg': msg}
 
 
 @decor1
-def structure():
+def structure(file, debug):
     """ Главная функция модуля структурирования
     Загружает список путей к файлам file_list из из file_list_cor.txt с помощью get_file_paths()
     (NOTE:список путей к файлам для тестовой версии отличается от списка файла для коррекции) """
-    file_list = get_file_list('file_list_cor.txt')['list']
+
+    msg = ''
+    file_list = get_file_list(file)['list']
     for file_name in file_list:
-        structure_file(file_name)
-    msg = 'Структурирование завершено.'
+        try:
+            structure_file(file_name, debug)
+        except FileNotFoundError:
+            msg += file_name + ', '
+    if len(msg):
+        msg = 'WARN: Не найдены статьи:\t' + msg
+    else:
+        msg = 'Успешно структурированы все файлы'
     return {'msg': msg}

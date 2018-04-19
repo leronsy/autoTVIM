@@ -28,7 +28,7 @@ def src_path(input_file_name="file_list.txt"):
 
 
 @decor2
-def get_file_list(input_file_name="file_list.txt"):
+def get_file_list(input_file_name): #="file_list.txt"
     """
     Построчно читает пути к файлам из текстового файла input_file_name
     (по умолчанию "file_list.txt")
@@ -41,7 +41,7 @@ def get_file_list(input_file_name="file_list.txt"):
             lines = f.readlines()
     except FileNotFoundError:
         print('В папке ', os.getcwd(),'\\',
-                         '\nне обнаружен файл со списком статей "',input_file_name,
+                         '\nне обнаружен файл "',input_file_name,
                          '".\nРабота программы будет остановлена.',sep='')
         sys.exit()
     else:

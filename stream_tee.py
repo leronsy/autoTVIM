@@ -1,8 +1,9 @@
 class stream_tee(object):
     # Based on https://gist.github.com/327585 by Anand Kunal
-    def __init__(self, stream1, stream2):
+    def __init__(self, stream1, stream2,stream3):
         self.stream1 = stream1
         self.stream2 = stream2
+        self.stream3 = stream3
         self.__missing_method_name = None  # Hack!
 
     def __getattribute__(self, name):
@@ -16,6 +17,10 @@ class stream_tee(object):
         # Emit method call to the log copy
         callable2 = getattr(self.stream2, self.__missing_method_name)
         callable2(*args, **kwargs)
+
+
+        callable3 = getattr(self.stream3, self.__missing_method_name)
+        callable3(*args, **kwargs)
 
         # Emit method call to stdout (stream 1)
         callable1 = getattr(self.stream1, self.__missing_method_name)
