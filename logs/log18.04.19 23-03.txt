@@ -1,0 +1,5 @@
+START:	 correct
+|	START:	 get_file_list
+В папке D:\projects\github\tasks\autoTVIM\
+не обнаружен файл со списком статей "file_list.txt".
+Работа программы будет остановлена.

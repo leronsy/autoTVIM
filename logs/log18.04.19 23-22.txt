@@ -1,0 +1,317 @@
+START:	 correct
+|	START:	 get_file_list
+|	ANS:	 Чтение путей из file_list.txt завершено.
+|	END:	 get_file_list
+----------------------------------------
+|	START:	 correct_file
+|	ANS:	 Исправлен:	D:\TVIM\articles\andronova\ANDRONOVA.tex
+|	END:	 correct_file
+----------------------------------------
+|	START:	 correct_file
+|	ANS:	 Исправлен:	D:\TVIM\articles\bosova\BOSOVA.tex
+|	END:	 correct_file
+----------------------------------------
+|	START:	 correct_file
+|	ANS:	 Исправлен:	D:\TVIM\articles\donskoy\DONSKOY.tex
+|	END:	 correct_file
+----------------------------------------
+|	START:	 correct_file
+|	ANS:	 Исправлен:	D:\TVIM\articles\kudryashov\Kudryashov.tex
+|	END:	 correct_file
+----------------------------------------
+|	START:	 correct_file
+|	ANS:	 Исправлен:	D:\TVIM\articles\lukyanova\LUKYANOVA.tex
+|	END:	 correct_file
+----------------------------------------
+|	START:	 correct_file
+|	ANS:	 Исправлен:	D:\TVIM\articles\mishachev\MISHACHEV.tex
+|	END:	 correct_file
+----------------------------------------
+|	START:	 correct_file
+|	START:	 correct_file
+|	ANS:	 Исправлен:	D:\TVIM\articles\rudenko\RUDENKO.tex
+|	END:	 correct_file
+----------------------------------------
+ANS:	 Не найдены:
+D:\TVIM\articles\mishachev\tvim-Mishachev-Shmyrinт.tex
+
+END:	 correct
+========================================
+START:	 structure
+|	START:	 get_file_list
+|	ANS:	 Чтение путей из file_list_cor.txt завершено.
+|	END:	 get_file_list
+----------------------------------------
+|	START:	 structure_file
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	clean_above_separatorANS: Найден init counters, удаление не нужно. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_en
+|	|	|	 create_labels  ANS:	 Метки успешно созданы.
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_begin
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	add_author_labelsANS: label уже существуют 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	comment_after_separatorANS: Строки после label _end закомментированы. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re addcontentsline
+|	|	add_addcontentslineANS: addcontentsline уже существуют. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input to_rus
+|	|	add_input_linesANS: Добавлены input строки в начало файла 	END:
+|	ANS:	 ('D:\\TVIM\\articles\\andronova\\ANDRONOVA_cor.tex', 'не нуждается в структурировании.')
+|	END:	 structure_file
+----------------------------------------
+|	START:	 structure_file
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	clean_above_separatorANS: Найден init counters, удаление не нужно. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_en
+|	|	|	 create_labels  ANS:	 Метки успешно созданы.
+|	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re label Surname_begin
+|	|	string_insertANS: Успешная вставка 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_begin
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	add_author_labelsANS: ('Не найден\t', 're label Surname_begin', '\nДобавлено', '\\label{BosovaKruglovPochinka_begin}\n') 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	comment_after_separatorANS: Строки после label _end закомментированы. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re addcontentsline
+|	|	add_addcontentslineANS: addcontentsline уже существуют. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input to_rus
+|	|	add_input_linesANS: Добавлены input строки в начало файла 	END:
+|	ANS:	 ('D:\\TVIM\\articles\\bosova\\BOSOVA_cor.tex', 'структурирован.', [0, 1, 0, 0, 0])
+|	END:	 structure_file
+----------------------------------------
+|	START:	 structure_file
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	clean_above_separatorANS: Найден init counters, удаление не нужно. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_en
+|	|	|	 create_labels  ANS:	 Метки успешно созданы.
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_begin
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	add_author_labelsANS: label уже существуют 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	comment_after_separatorANS: Строки после label _end закомментированы. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re addcontentsline
+|	|	add_addcontentslineANS: addcontentsline уже существуют. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input to_rus
+|	|	add_input_linesANS: Добавлены input строки в начало файла 	END:
+|	ANS:	 ('D:\\TVIM\\articles\\donskoy\\DONSKOY_cor.tex', 'не нуждается в структурировании.')
+|	END:	 structure_file
+----------------------------------------
+|	START:	 structure_file
+|	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re input init_counters
+|	|	clean_above_separatorANS: ('Строки до разделителя', '\\markboth', 'удалены') 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_en
+|	|	|	 create_labels  ANS:	 Метки успешно созданы.
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_begin
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	add_author_labelsANS: label уже существуют 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	comment_after_separatorANS: Строки после label _end закомментированы. 	END:
+|	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re addcontentsline
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_en
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_ru
+|	|	add_addcontentslineANS: Успешная вставка addcontentsline 	END:
+|	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re input init_counters
+|	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re input to_rus
+|	|	add_input_linesANS: Добавлены input строки в начало файла 	END:
+|	ANS:	 ('D:\\TVIM\\articles\\kudryashov\\Kudryashov_cor.tex', 'структурирован.', [1, 0, 0, 2, 2])
+|	END:	 structure_file
+----------------------------------------
+|	START:	 structure_file
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	clean_above_separatorANS: Найден init counters, удаление не нужно. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_en
+|	|	|	 create_labels  ANS:	 Метки успешно созданы.
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_begin
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	string_insertANS: Успешная вставка 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	string_insertANS: Успешная вставка 	END:
+|	|	add_author_labelsANS: Фамилии в исходном label не совпадают с полученными. Произведена замена. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	comment_after_separatorANS: Строки после label _end закомментированы. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re addcontentsline
+|	|	add_addcontentslineANS: addcontentsline уже существуют. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input to_rus
+|	|	add_input_linesANS: Добавлены input строки в начало файла 	END:
+|	ANS:	 ('D:\\TVIM\\articles\\lukyanova\\LUKYANOVA_cor.tex', 'не нуждается в структурировании.')
+|	END:	 structure_file
+----------------------------------------
+|	START:	 structure_file
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	clean_above_separatorANS: Найден init counters, удаление не нужно. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_en
+|	|	|	 create_labels  ANS:	 Метки успешно созданы.
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_begin
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	string_insertANS: Успешная вставка 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	string_insertANS: Успешная вставка 	END:
+|	|	add_author_labelsANS: Фамилии в исходном label не совпадают с полученными. Произведена замена. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	comment_after_separatorANS: Строки после label _end закомментированы. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re addcontentsline
+|	|	add_addcontentslineANS: addcontentsline уже существуют. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input to_rus
+|	|	add_input_linesANS: Добавлены input строки в начало файла 	END:
+|	ANS:	 ('D:\\TVIM\\articles\\mishachev\\MISHACHEV_cor.tex', 'не нуждается в структурировании.')
+|	END:	 structure_file
+----------------------------------------
+|	START:	 structure_file
+|	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re input init_counters
+|	|	clean_above_separatorANS: ('Строки до разделителя', '\\markboth', 'удалены') 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_en
+|	|	|	 create_labels  ANS:	 Метки успешно созданы.
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_begin
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	string_insertANS: Успешная вставка 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	string_insertANS: Успешная вставка 	END:
+|	|	add_author_labelsANS: Фамилии в исходном label не совпадают с полученными. Произведена замена. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	comment_after_separatorANS: Строки после label _end закомментированы. 	END:
+|	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re addcontentsline
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_en
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_ru
+|	|	add_addcontentslineANS: Успешная вставка addcontentsline 	END:
+|	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re input init_counters
+|	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re input to_rus
+|	|	add_input_linesANS: Добавлены input строки в начало файла 	END:
+|	ANS:	 ('D:\\TVIM\\articles\\mishachev\\tvim-Mishachev-Shmyrin_cor.tex', 'структурирован.', [1, 0, 0, 2, 2])
+|	END:	 structure_file
+----------------------------------------
+|	START:	 structure_file
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	clean_above_separatorANS: Найден init counters, удаление не нужно. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_en
+|	|	|	 create_labels  ANS:	 Метки успешно созданы.
+|	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re label Surname_begin
+|	|	string_insertANS: Успешная вставка 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_begin
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	string_insertANS: Успешная вставка 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	string_insertANS: Успешная вставка 	END:
+|	|	add_author_labelsANS: Фамилии в исходном label не совпадают с полученными. Произведена замена. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
+|	|	comment_after_separatorANS: Строки после label _end закомментированы. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re addcontentsline
+|	|	add_addcontentslineANS: addcontentsline уже существуют. 	END:
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input to_rus
+|	|	add_input_linesANS: Добавлены input строки в начало файла 	END:
+|	ANS:	 ('D:\\TVIM\\articles\\rudenko\\RUDENKO_cor.tex', 'структурирован.', [0, 1, 0, 0, 0])
+|	END:	 structure_file
+----------------------------------------
+ANS:	 Структурирование завершено.
+END:	 structure
+========================================
+START:	 assemble
+|	START:	 src_path
+|	ANS:	 путь к src: D:\TVIM\\src
+|	END:	 src_path
+----------------------------------------
+|	START:	 get_file_list
+|	ANS:	 Чтение путей из file_list_cor_struct.txt завершено.
+|	END:	 get_file_list
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\andronova\ANDRONOVA_cor_struct.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 к.ф-м.н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'им. '->'им.\;' 'В.'->'В.\;' 'И. '->'И.\;' 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\bosova\BOSOVA_cor_struct.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 Не удалось заменить
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г.'->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 Не удалось заменить
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г.'->'г.\;' 'им. '->'им.\;' 'Н.'->'Н.\;' 'И. '->'И.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 д.ф.-м. н -> dfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г.'->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\donskoy\DONSKOY_cor_struct.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 д.\;ф.-м.\;н -> dfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\kudryashov\Kudryashov_cor_struct.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 к.\;ф.-м.\;н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\lukyanova\LUKYANOVA_cor_struct.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 д.\;т.\;н -> dtn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 Не удалось заменить
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 к.\;т.\;н -> ktn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 к.\;ф.-м.\;н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'В.'->'В.\;' 'И. '->'И.\;' 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\mishachev\MISHACHEV_cor_struct.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 к.\;ф.-м.\;н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 д.\;т.\;н -> dtn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\mishachev\tvim-Mishachev-Shmyrin_cor_struct.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 к.\;ф.-м.\;н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 д.\;т.\;н -> dtn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\rudenko\RUDENKO_cor_struct.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 к.ф.-м.н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'им.~'->'им.\;' 'В.~'->'В.\;' 'И.~'->'И.\;' 'г.~'->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+|	|	unique_authorANS: Количество авторов: 12 	END:
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Применение теор...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Энергетическая ...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Извлечение опти...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Изоморфизм спек...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Структурное окр...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Окрестностные с...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Окрестностные с...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	NO TITLE!...
+ANS:	 Сборка файлов завершена
+END:	 assemble
+========================================
