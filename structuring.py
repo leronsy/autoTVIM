@@ -5,6 +5,10 @@ from dictionaries import structuring_dict
 from file_management import get_file_list
 
 
+class MyException(Exception):
+    pass
+
+
 @decor4
 def search_pattern(file_content, pattern_key):
     """
@@ -114,7 +118,8 @@ def add_author_labels(file_content):
         msg += ("\nДобавлено", label_end)
         match_surnames_begin = search_pattern(file_content, 're label Surname_begin')['match']
         changes += 1
-    if not (match_surnames_begin.group('surname') == surnames and match_surnames_end.group('surname') == surnames):
+    if not (match_surnames_begin.group('surname') == surnames and match_surnames_end.group(
+            'surname') == surnames):
         # print("!!!\n",file_content[26100:26150],"!!!")
         file_content = string_insert(file_content, surnames,
                                      match_surnames_begin.span('surname')[0],
@@ -149,7 +154,7 @@ def clean_above_separator(file_content):
     if len(tuple_of_parts[1]) == 0:
         print()
     file_content = tuple_of_parts[1] + tuple_of_parts[2]
-    msg = ("Строки до разделителя", structuring_dict.get('markboth'), "удалены")
+    msg = "Строки до разделителя " + structuring_dict.get('markboth') + " удалены"
     return {'file_content': file_content, 'changes': changes, 'msg': msg}
 
 
@@ -198,6 +203,12 @@ def add_input_lines(file_content):
     return {'file_content': file_content, 'changes': changes, 'msg': msg}
 
 
+def build_contentsline(match):
+    title = match.group('title').replace('\n', ' ')
+    author = match.group('author').replace('\n', ' ')
+    return '\\addcontentsline{toc}{art}{\\textbf{' + author + '} ' + title + '}'
+
+
 @decor3
 def add_addcontentsline(file_content):
     """ Добавляет \addcontentsline в начале файла
@@ -206,30 +217,40 @@ def add_addcontentsline(file_content):
     "\abstract" и "\abstractWithTitle",достаёт из них title и author
     создаёт строки \addcontentsline и вставляет их в начало файла
     Возвращает отредактированный файл"""
-    # TODO: проверка для каждой отдельной строки
     changes = 0
-    msg = "addcontentsline уже существуют."
-    lang_list = ['re title_author_en', 're title_author_ru']
+    # TODO: можно проверять наличие обеих строк через match_contentsline.groups
     match_contentsline = search_pattern(file_content, 're addcontentsline')['match']
-    if not match_contentsline:
-        msg = "Успешная вставка addcontentsline"
-        for lang in lang_list:
-            contentsline = ''
-            match = search_pattern(file_content, lang)['match']
-            if match:
-                title = match.group('title')
-                author = match.group('author')
-                contentsline = '\\addcontentsline{toc}{art}{\\textbf{' + author + '} ' + title + '}'
-            if len(contentsline):
-                file_content = contentsline + '\n\n' + file_content
-                changes += 1
-            else:
-                msg = ("Не найдены данные:\t", lang)
+    if match_contentsline:
+        msg = "addcontentsline уже существуют."
+    else:
+        msg = ''
+        info_list = ['re title_author_ru', 're title_author_en']
+        for info in info_list:
+            try:
+                match = search_pattern(file_content, info)['match']
+                if match:
+                    contentsline = build_contentsline(match)
+                if len(contentsline):
+                    # Разделение по init, если есть
+                    # TODO: имеет ли значение порядок addcontentsline?
+                    separator_input = structuring_dict.get('input to_rus')
+                    if separator_input != -1:
+                        file_content_list = file_content.partition(separator_input)
+                        file_content = file_content_list[0] + file_content_list[1]\
+                                       + '\n' + contentsline + '\n' + file_content_list[2]
+                    else:
+                        file_content = contentsline + '\n' + file_content
+                    changes += 1
+                    msg += "Успешная вставка addcontentsline " + info[-2:].upper()
+            except :
+                msg = 'ERR: Не найдены данные для создания contentsline ' + info[-2:].upper()
+
     return {'file_content': file_content, 'changes': changes, 'msg': msg}
 
 
 """Список основных функций, применяемых по порядку к каждому файлу"""
-function_list = [clean_above_separator, add_author_labels, comment_after_separator, add_addcontentsline,
+function_list = [clean_above_separator, add_author_labels, comment_after_separator,
+                 add_addcontentsline,
                  add_input_lines]
 
 

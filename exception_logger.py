@@ -1,6 +1,4 @@
 import logging
-
-import functools
 import time
 def exception(ecx_logger):
     """

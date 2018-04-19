@@ -1,11 +1,12 @@
 import codecs
 import os
 import re
-from operator import itemgetter
 from copy import deepcopy
-from file_management import get_file_list, src_path
-from dictionaries import structuring_dict, science_dict, country_dict
+from operator import itemgetter
+
 from decorators import decor1, decor2, decor3, decor4
+from dictionaries import structuring_dict, science_dict, country_dict
+from file_management import get_file_list, src_path
 
 
 @decor4
@@ -99,7 +100,7 @@ def get_authorinfo(file_content):
         author[2] = degree_replace(author[2])['result']
         # замена обычных пробелов между сокращением и следующим словом
         author[2] = abbr_space_replace(author[2])['abbr']
-        # TODO:Менять только последнюю?????? тогда нужны изменения в коде
+        # TODO:Менять только последнюю найденную ?????? тогда нужны изменения в коде
         author[2] = country_replace(author[2])['country']
         author[3] += '\n'
         result_lol.append(author)
@@ -113,7 +114,6 @@ def get_authorinfo(file_content):
             name_lst.append(word)
         authors_clean[i] = name_lst
 
-    # print('result_lol',result_lol)
     return {'msg': msg, 'authorinfo': result_lol, 'authors_clean': authors_clean}
 
 

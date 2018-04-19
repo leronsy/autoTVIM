@@ -22,7 +22,7 @@ def correct(file, debug):
         except FileNotFoundError:
             msg += file_name + ', '
     if len(msg):
-        msg = 'WARN: Не найдены статьи:\t' + msg
+        msg = 'WARN: Не найдены статьи:\t' + msg +'\nисправление завершено.'
     else:
         msg = 'Успешно исправлены все файлы'
     return {'msg': msg}

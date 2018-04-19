@@ -54,13 +54,13 @@ START:	 structure
 |	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re label Surname_end
 |	|	comment_after_separatorANS: Строки после label _end закомментированы. 	END:
 |	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re addcontentsline
-|	|	|	 search_pattern  ANS:	 Нет совпадения c шаблоном	re title_author_ru
+|	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_ru
 |	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re title_author_en
-|	|	add_addcontentslineANS: ERR: Не найдены данные для создания contentsline RUУспешная вставка addcontentsline EN 	END:
+|	|	add_addcontentslineANS: Успешная вставка addcontentsline RUУспешная вставка addcontentsline EN 	END:
 |	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input init_counters
 |	|	|	 search_pattern  ANS:	 Есть совпадение c шаблоном	re input to_rus
 |	|	add_input_linesANS: Добавлены input строки в начало файла 	END:
-|	ANS:	 D:\TVIM\articles\andronova\ANDRONOVA_c.tex структурирован. [0, 0, 0, 1, 0]
+|	ANS:	 D:\TVIM\articles\andronova\ANDRONOVA_c.tex структурирован. [0, 0, 0, 2, 0]
 |	END:	 structure_file
 ----------------------------------------
 |	START:	 structure_file
