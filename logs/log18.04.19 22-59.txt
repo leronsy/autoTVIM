@@ -1,3 +1,0 @@
-START:	 correct
-|	START:	 get_file_list
-Не обнаружен файл со списком статей file_list.txt, работа программы будет остановлена.

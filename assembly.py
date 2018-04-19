@@ -144,14 +144,15 @@ def referat_to_string(referat):
 
 
 @decor1
-def assemble():
-    path = src_path()['path']
-    file_list = get_file_list('file_list_cor_struct.txt')['list']
+def assemble(file, debug):
+    path = src_path(file)['path']
+    file_list = get_file_list(file)['list']
 
     authorinfo_list = []
     referat_lol = []
     for file_name in file_list:
-
+        if debug:
+            file_name=file_name[:-4]+'_cs'+'.tex'
         referat_lst = []
         print('Работа над файлом:\t', file_name, sep='')
         with codecs.open(file_name, 'r', 'cp1251') as fr:
@@ -214,13 +215,22 @@ def assemble():
 
     os.chdir(path)
     # без newline='\n' портятся переводы строк
-    with codecs.open("authors.tex", 'r', 'cp1251') as fr:
+    authors_tex = 'authors.tex'
+    referats_tex = 'referats.tex'
+    with codecs.open(authors_tex, 'r', 'cp1251') as fr:
         authors_orig = fr.read()
         medskip = structuring_dict.get('medskip')
         authorinfo = structuring_dict.get('authorinfo')
         authors_file_head = authors_orig.split(medskip + '\n' + authorinfo, 1)[0]
 
-    with open("authors" + "_new.tex", 'w', newline='\n') as fw:
+    if debug:
+        authors_tex_new = "authors" + "_new.tex"
+        referats_tex_new = 'referats' +'_new.tex'
+    else:
+        authors_tex_new = "authors.tex"
+        referats_tex_new = 'referats.tex'
+
+    with open(authors_tex_new, 'w', newline='\n') as fw:
         fw.write(authors_file_head)
         for lst in authorinfo_list:
             fw.write("%s\n" % ''.join(lst))
@@ -230,7 +240,7 @@ def assemble():
         splitter = structuring_dict.get('referats splitter')
         referats_file_head = referats_orig.split(splitter)[0]
 
-    with open("referats" + "_new.tex", 'w', newline='\n') as fw:
+    with open(referats_tex_new, 'w', newline='\n') as fw:
         fw.write(referats_file_head)
         for referat in referat_lol:
             entry = referat_to_string(referat)['referat_str']

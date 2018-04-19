@@ -15,15 +15,16 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/autoTVIM$test.coverage" NAME="test Coverage Results" MODIFIED="1524127823879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/autoTVIM$main.coverage" NAME="main Coverage Results" MODIFIED="1524177958615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/autoTVIM$Improver02.coverage" NAME="Improver02 Coverage Results" MODIFIED="1524177374981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="assembly.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="assembly.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assembly.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2738">
-              <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+            <state relative-caret-position="245">
+              <caret line="230" column="41" lean-forward="true" selection-start-line="230" selection-start-column="41" selection-end-line="230" selection-end-column="41" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -43,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="structuring.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="structuring.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/structuring.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="61">
@@ -66,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Improver02.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Improver02.py">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            <state relative-caret-position="240">
+              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -115,10 +116,10 @@
       <find>_cor</find>
       <find>вставка</find>
       <find>addcontentsline</find>
-      <find>Успешная вставка</find>
-      <find>Не найдены данные</find>
-      <find>Не найдены данные для создания</find>
-      <find>Строки до разделителя</find>
+      <find />
+      <find />
+      <find />
+      <find />
     </findStrings>
     <replaceStrings>
       <replace>struct_add_addcontentsline</replace>
@@ -161,9 +162,10 @@
         <option value="$PROJECT_DIR$/correction.py" />
         <option value="$PROJECT_DIR$/exception_logger.py" />
         <option value="$PROJECT_DIR$/decorators.py" />
-        <option value="$PROJECT_DIR$/assembly.py" />
         <option value="$PROJECT_DIR$/Improver02.py" />
         <option value="$PROJECT_DIR$/structuring.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/assembly.py" />
       </list>
     </option>
   </component>
@@ -244,7 +246,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Improver02">
+  <component name="RunManager" selected="Python.main">
     <configuration name="Improver02" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="autoTVIM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,7 +260,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Improver02.py" />
+      <option name="SCRIPT_NAME" value="D:\projects\github\autoTVIM\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -283,25 +285,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="exception_logger" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="autoTVIM" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exception_logger.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="file_management" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="autoTVIM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -316,6 +299,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/file_management.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="autoTVIM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -343,17 +345,17 @@
     <list>
       <item itemvalue="Python.Improver02" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.exception_logger" />
       <item itemvalue="Python.file_management" />
       <item itemvalue="Python.assembly" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.Improver02" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.assembly" />
         <item itemvalue="Python.file_management" />
-        <item itemvalue="Python.exception_logger" />
       </list>
     </recent_temporary>
   </component>
@@ -629,7 +631,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Improver02.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
@@ -656,7 +658,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Improver02.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="13" selection-start-column="12" selection-end-column="13" />
@@ -780,26 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Improver02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assembly.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2738">
-          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dictionaries.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -825,6 +807,26 @@
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#9281#10556#0" />
             <element signature="e#11068#11581#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assembly.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="230" column="41" lean-forward="true" selection-start-line="230" selection-start-column="41" selection-end-line="230" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -33,4 +33,4 @@ def main(c=True, s=True, a=True, file='file_list.txt', debug=True):
     return
 
 
-main(True, True, False)
+main()  # True, True, False)

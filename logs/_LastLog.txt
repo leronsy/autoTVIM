@@ -212,3 +212,109 @@ START:	 structure
 ANS:	 Успешно структурированы все файлы
 END:	 structure
 ========================================
+START:	 assemble
+|	START:	 src_path
+|	ANS:	 путь к src: D:\TVIM\\src
+|	END:	 src_path
+----------------------------------------
+|	START:	 get_file_list
+|	ANS:	 Чтение путей из file_list.txt завершено.
+|	END:	 get_file_list
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\andronova\ANDRONOVA_cs.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 к.ф-м.н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'им. '->'им.\;' 'В.'->'В.\;' 'И. '->'И.\;' 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\bosova\BOSOVA_cs.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 Не удалось заменить
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г.'->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 Не удалось заменить
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г.'->'г.\;' 'им. '->'им.\;' 'Н.'->'Н.\;' 'И. '->'И.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 д.ф.-м. н -> dfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г.'->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\donskoy\DONSKOY_cs.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 д.\;ф.-м.\;н -> dfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\kudryashov\Kudryashov_cs.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 к.\;ф.-м.\;н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\lukyanova\LUKYANOVA_cs.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 д.\;т.\;н -> dtn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 Не удалось заменить
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 к.\;т.\;н -> ktn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 к.\;ф.-м.\;н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'В.'->'В.\;' 'И. '->'И.\;' 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\mishachev\MISHACHEV_cs.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 к.\;ф.-м.\;н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 д.\;т.\;н -> dtn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\mishachev\tvim-Mishachev-Shmyrin_cs.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 к.\;ф.-м.\;н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	|	|	 degree_replace  ANS:	 д.\;т.\;н -> dtn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'г. '->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+Работа над файлом:	D:\TVIM\articles\rudenko\RUDENKO_cs.tex
+|	START:	 get_authorinfo
+|	|	|	 degree_replace  ANS:	 к.ф.-м.н -> kfmn
+|	|	|	 abbr_space_replace  ANS:	 Заменено: 'им.~'->'им.\;' 'В.~'->'В.\;' 'И.~'->'И.\;' 'г.~'->'г.\;' 
+|	|	|	 country_replace  ANS:	 Cтрана: РФ
+|	ANS:	 good
+|	END:	 get_authorinfo
+----------------------------------------
+|	|	unique_authorANS: Количество авторов: 12 	END:
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	NO TITLE!...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Энергетическая ...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Извлечение опти...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Изоморфизм спек...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Структурное окр...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Окрестностные с...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	Окрестностные с...
+|	|	|	 referat_to_string  ANS:	 Успешно преобразован:	NO TITLE!...
+ANS:	 Сборка файлов завершена
+END:	 assemble
+========================================
